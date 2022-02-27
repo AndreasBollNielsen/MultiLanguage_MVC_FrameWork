@@ -120,6 +120,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Content.fi.designer.cs">
+      <DependentUpon>Content.fi.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.hu.designer.cs">
+      <DependentUpon>Content.hu.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\Content.de.designer.cs">
       <DependentUpon>Content.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -189,6 +199,18 @@
     <Content Include="App_GlobalResources\Content.de.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Content.de.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.hu.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.hu.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.fi.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.fi.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>

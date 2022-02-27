@@ -7,27 +7,15 @@
 </head>
 <body>
 
+
+    <h1 class="text-center">Nato Registration Page</h1>
+
     <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "en" })">English</a> |
-    <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "de" })">German</a>
+    <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "de" })">Deutch</a> |
+    <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "hu" })">Ungarsk</a> |
+    <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "fi" })">Suomi</a>
     <br />
 
-
-   
-
-    <h3>Number Format</h3>
-    @{ var number = 1234567; }
-    Number: @number.ToString("N")
-
-    <h3>Currency Format</h3>
-    @{ var price = 1234567; }
-    Price: @price.ToString("C")
-
-    <h3>Percent Format</h3>
-    @{ var percent = 12.34; }
-    Percent: @percent.ToString("P")
-
-    <h3>DateTime Format</h3>
-    Today: @DateTime.Now.ToString("D")
 
 
     <div class="row">
@@ -83,7 +71,7 @@
             </form>
         </div>
 
-        <div class="col-8">
+        <div class="col-4">
             <h3>@Resources.Content.Description</h3>
             <div class="row p-1">
 
@@ -93,6 +81,10 @@
 
 
             </div>
+        </div>
+
+        <div class="col-4 text-center">
+            <img src="https://www.unvienna.org/sdg/prevention/img/logos/un_emblem.jpg" width="450"/>
         </div>
 
     </div>
