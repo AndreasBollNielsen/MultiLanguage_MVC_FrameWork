@@ -8,9 +8,11 @@
 <body>
 
     <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "en" })">English</a> |
-    @*<a href="@Url.Action("ChangeLanguage", "Account", new { lang = "fr" })">French</a> |*@
     <a href="@Url.Action("ChangeLanguage", "Account", new { lang = "de" })">German</a>
     <br />
+
+
+    <label>this is a test</label>
 
     <h3>Number Format</h3>
     @{ var number = 1234567; }
@@ -27,33 +29,76 @@
     <h3>DateTime Format</h3>
     Today: @DateTime.Now.ToString("D")
 
-    <h3>@Resources.Content.Register</h3>
-    @using (Html.BeginForm("Save", "Account"))
-    {
-        <table cellpadding="2" cellspacing="2" border="0">
-            <tr>
-                <td>@Resources.Content.Username</td>
-                <td>@Html.TextBoxFor(model => model.Username)</td>
-            </tr>
-            <tr>
-                <td>@Resources.Content.Password</td>
-                <td>@Html.PasswordFor(model => model.Password)</td>
-                
-            </tr>
-            <tr>
-                <td>@Resources.Content.FullName</td>
-                <td>@Html.TextBoxFor(model => model.FullName)</td>
-            </tr>
-            <tr>
-                <td>@Resources.Content.Address</td>
-                <td>@Html.TextBoxFor(model => model.Address)</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td colspan="2"><input type="submit" value="@Resources.Content.Save" /></td>
-            </tr>
-        </table>
-    }
+
+    <div class="row">
+        <div class="col-4">
+            <h3>@Resources.Content.Register</h3>
+            <form class="border">
+                <div class="row p-1">
+                    <div class="form-group">
+                        <label for="username">@Resources.Content.Username</label>
+                        <input class="form-control" type="text" id="username" />
+                    </div>
+
+
+                </div>
+
+                <div class="row p-1">
+                    <div class="form-group">
+                        <label for="password">@Resources.Content.Password</label>
+                        <input class="form-control" type="password" id="password" />
+                    </div>
+
+                </div>
+
+                <div class="row p-1">
+                    <div class="form-group">
+                        <label for="fullName">@Resources.Content.FullName</label>
+                        <input class="form-control" type="text" id="fullName" />
+                    </div>
+
+
+
+                </div>
+
+                <div class="row p-1">
+                    <div class="form-group">
+                        <label for="address">@Resources.Content.Address</label>
+                        <input class="form-control" type="text" id="address" />
+                    </div>
+
+
+
+                </div>
+
+                <div class="row p-1">
+                    <div class="col-3">
+                        <input class="form-control btn btn-primary" type="submit" value="@Resources.Content.Save" />
+                    </div>
+                    <div class="col-9">
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="col-8">
+            <h3>@Resources.Content.Description</h3>
+            <div class="row p-1">
+
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
 
 </body>
 </html>
